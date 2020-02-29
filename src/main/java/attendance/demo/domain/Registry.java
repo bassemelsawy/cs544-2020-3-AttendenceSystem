@@ -8,10 +8,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-
-@Setter
-@Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Registry {
@@ -32,4 +28,43 @@ public class Registry {
 	@Valid
 	@NotNull
 	private Student student;
+	
+	public Registry() {
+		
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public double getGPA() {
+		return GPA;
+	}
+
+	public void setGPA(double gPA) {
+		GPA = gPA;
+	}
+
+	public CourseOffering getCourseOffering() {
+		return courseOffering;
+	}
+
+	public void setCourseOffering(CourseOffering courseOffering) {
+		this.courseOffering = courseOffering;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+	
+	
+	
 }

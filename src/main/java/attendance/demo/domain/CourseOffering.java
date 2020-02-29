@@ -11,9 +11,6 @@ import javax.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
-@Setter
-@Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class CourseOffering {
@@ -41,5 +38,60 @@ public class CourseOffering {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@Valid
 	private Faculty faculty;
+	
+	public  CourseOffering() {
+		
+	}
+
+	public int getCourseOfferingId() {
+		return courseOfferingId;
+	}
+
+	public void setCourseOfferingId(int courseOfferingId) {
+		this.courseOfferingId = courseOfferingId;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+	public Faculty getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(Faculty faculty) {
+		this.faculty = faculty;
+	}
+	
+	
+	
 
 }

@@ -21,6 +21,10 @@ public class Administrator extends AbstractUser {
     private String firstName;
     @NotBlank
     private String lastName;
+    
+    public Administrator() {
+    	
+    }
 
     @Override
     public String getUsername() {
@@ -35,9 +39,6 @@ public class Administrator extends AbstractUser {
     @Override
     public int getId() {
         return super.getId();
-    }
-
-    public Administrator() {
     }
 
     public String getFirstName() {

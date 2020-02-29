@@ -12,10 +12,6 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-
-@Setter
-@Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Location {
@@ -28,6 +24,34 @@ public class Location {
     
     @NotBlank
     private String name;
+    
+    public Location() {
+    	
+    }
 
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getLocationId() {
+		return locationId;
+	}
+
+	public void setLocationId(String locationId) {
+		this.locationId = locationId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+    
 }

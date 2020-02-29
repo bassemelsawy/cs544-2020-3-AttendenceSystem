@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 public abstract class AbstractUser {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
 
     protected String username;

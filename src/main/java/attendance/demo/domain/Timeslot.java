@@ -11,9 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalTime;
 
-@Setter
-@Getter
-@NoArgsConstructor
+
 @AllArgsConstructor
 @Entity
 public class Timeslot {
@@ -29,5 +27,49 @@ public class Timeslot {
 
 	private LocalTime endTime;
 
+	public  Timeslot() {
+		
+	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getAbbreviation() {
+		return abbreviation;
+	}
+
+	public void setAbbreviation(String abbreviation) {
+		this.abbreviation = abbreviation;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public LocalTime getBeginTime() {
+		return beginTime;
+	}
+
+	public void setBeginTime(LocalTime beginTime) {
+		this.beginTime = beginTime;
+	}
+
+	public LocalTime getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(LocalTime endTime) {
+		this.endTime = endTime;
+	}
+	
+	
 }
